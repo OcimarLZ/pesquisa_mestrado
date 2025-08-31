@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licenciaturas - Relatórios e Gráficos com base nos dados do INEP</title>
+    <style>
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2E7D32;
+            color: #fff;
+            padding: 24px 0 16px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0 0 8px 0;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #2E7D32;
+            margin-top: 32px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .grafico {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .grafico img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            background: #fafafa;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .tabela {
+            margin: 0 auto 24px auto;
+            max-width: 900px;
+            overflow-x: auto;
+            background: #fafafa;
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .tabela iframe {
+            width: 100%;
+            min-height: 320px;
+            border: none;
+        }
+        .creditos {
+            text-align: center;
+            color: #888;
+            font-size: 0.95em;
+            margin-top: 40px;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 8px; }
+            .tabela { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Licenciaturas - Relatórios e Gráficos com base nos dados do INEP</h1>
+        <div>Visualização dos principais relatórios, tabelas e gráficos gerados pela aplicação</div>
+    </header>
+    <div class="container">
+        <!-- Sumário -->
+        <div id="sumario" class="section" style="margin-bottom: 32px;">
+            <h2 style="margin-top:0;">Sumário</h2>
+            <ul style="font-size:1.1em; line-height:1.7;">
+                <li><a href="#sec-ies-ativas-ano">IES Ativas por Ano</a></li>
+                <li><a href="#sec-ies-ativas-categoria">IES Ativas por Ano e Categoria Administrativa</a></li>
+                <li><a href="#sec-ies-ativas-grande-categoria">IES Ativas por Ano e Grande Categoria Administrativa</a></li>
+                <li><a href="#sec-ies-ativas-grau">IES Ativas por Ano e Grau Acadêmico</a></li>
+                <li><a href="#sec-numeros-educacao-superior">Discentes: Números Globais da Educação Superior</a></li>
+                <li><a href="#sec-discentes-numeros-licenciaturas">Discentes: Números Globais das Licenciaturas</a></li>
+                <li><a href="#sec-licenciaturas-modalidade">IES Ativas Licenciaturas por Modalidade de Ensino</a></li>
+                <li><a href="#sec-cursos-categoria">Licenciaturas: Qtde de Cursos por Categoria Administrativa</a></li>
+                <li><a href="#sec-cursos-rede-modalidade">Cursos de Licenciatura por Tipo de Rede e Modalidade</a></li>
+                <li><a href="#sec-ingressantes-rede-modalidade">Ingressantes em Licenciaturas por Tipo de Rede e Modalidade</a></li>
+                <li><a href="#sec-inscritos-rede-modalidade">Inscritos em Licenciaturas por Tipo de Rede e Modalidade</a></li>
+                <li><a href="#sec-trancadas-rede-modalidade">Matrículas Trancadas em Licenciaturas por Tipo de Rede e Modalidade</a></li>
+                <li><a href="#sec-evadidos-rede-modalidade">Evadidos em Licenciaturas por Tipo de Rede e Modalidade</a></li>
+                <li><a href="#sec-concluintes-rede-modalidade">Concluintes em Licenciaturas por Tipo de Rede e Modalidade</a></li>
+                <li><a href="#sec-relacao-conc-tranc-evad">Relação (%) de Concluintes, Trancados e Evadidos sobre Ingressantes em Licenciaturas</a></li>
+            </ul>
+        </div>
+        <!-- Nova seção: IES Ativas por Ano -->
+        <div class="section" id="sec-ies-ativas-ano">
+            <h2>IES Ativas por Ano</h2>
+            <div class="grafico">
+                <img src="graficos/ies_ativas_por_ano.png" alt="Gráfico de IES Ativas por Ano">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/ies_ativas_por_ano.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <!-- Nova seção: IES Ativas por Ano e Categoria Administrativa -->
+        <div class="section" id="sec-ies-ativas-categoria">
+            <h2>IES Ativas por Ano e Categoria Administrativa</h2>
+            <div class="grafico">
+                <img src="graficos/ies_ativas_por_categoria.png" alt="Gráfico de IES Ativas por Ano e Categoria Administrativa">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/ies_ativas_por_categoria.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <!-- Nova seção: IES Ativas por Ano e Grande Categoria Administrativa -->
+        <div class="section" id="sec-ies-ativas-grande-categoria">
+            <h2>IES Ativas por Ano e Grande Categoria Administrativa</h2>
+            <div class="grafico">
+                <img src="graficos/ies_ativas_por_grande_categoria.png" alt="Gráfico de IES Ativas por Ano e Grande Categoria Administrativa">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/ies_ativas_por_grande_categoria.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <!-- Nova seção: IES Ativas por Ano e Grau Acadêmico -->
+        <div class="section" id="sec-ies-ativas-grau">
+            <h2>IES Ativas por Ano e Grau Acadêmico</h2>
+            <div class="grafico">
+                <img src="graficos/ies_ativas_por_grau_academico.png" alt="Gráfico de IES Ativas por Ano e Grau Acadêmico">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/ies_ativas_por_grau_academico.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <!-- Nova seção: Números da Educação Superior -->
+        <div class="section" id="sec-numeros-educacao-superior">
+            <h2>Números da Educação Superior</h2>
+            <div class="grafico">
+                <img src="graficos/numeros_da_educacao_superior.png" alt="Gráfico Números da Educação Superior">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/numeros_da_educacao_superior.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <!-- Nova seção: Discentes: Números Globais das Licenciaturas -->
+        <div class="section" id="sec-discentes-numeros-licenciaturas">
+            <h2>Discentes: Números Globais das Licenciaturas</h2>
+            <div class="grafico">
+                <img src="graficos/discentes_numeros_globais_licenciaturas.png" alt="Gráfico Discentes: Números Globais das Licenciaturas">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/discentes_numeros_globais_licenciaturas.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <!-- Nova seção: Licenciaturas por Modalidade de Ensino -->
+        <div class="section" id="sec-licenciaturas-modalidade">
+            <h2>Licenciaturas por Modalidade de Ensino</h2>
+            <div class="grafico">
+                <img src="graficos/licenciaturas_por_modalidade_ensino.png" alt="Gráfico Licenciaturas por Modalidade de Ensino">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/licenciaturas_por_modalidade_ensino.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <!-- Fim Sumário -->
+        <div class="section" id="sec-cursos-categoria">
+            <h2>Licenciaturas: Qtde de Cursos por Categoria Administrativa</h2>
+            <div class="grafico">
+                <img src="graficos/licenciaturas_categoria_administrativa.png" alt="Gráfico Licenciaturas por Categoria Administrativa">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/licenciaturas_categoria_administrativa.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <div class="section" id="sec-cursos-rede-modalidade">
+            <h2>Cursos de Licenciatura por Tipo de Rede e Modalidade</h2>
+            <div class="grafico">
+                <img src="graficos/cursos_tp_rede_modalidade.png" alt="Gráfico Cursos de Licenciatura por Tipo de Rede e Modalidade">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/cursos_tp_rede_modalidade.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <div class="section" id="sec-ingressantes-rede-modalidade">
+            <h2>Ingressantes em Licenciaturas por Tipo de Rede e Modalidade</h2>
+            <div class="grafico">
+                <img src="graficos/licenciaturas_ingressos_por_rede_modalidade.png" alt="Gráfico Ingressantes em Licenciaturas por Tipo de Rede e Modalidade">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/licenciaturas_ingressos_por_rede_modalidade.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <div class="section" id="sec-inscritos-rede-modalidade">
+            <h2>Inscritos em Licenciaturas por Tipo de Rede e Modalidade</h2>
+            <div class="grafico">
+                <img src="graficos/licenciaturas_inscritos_por_rede_modalidade.png" alt="Gráfico Inscritos em Licenciaturas por Tipo de Rede e Modalidade">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/licenciaturas_inscritos_por_rede_modalidade.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <div class="section" id="sec-trancadas-rede-modalidade">
+            <h2>Matrículas Trancadas em Licenciaturas por Tipo de Rede e Modalidade</h2>
+            <div class="grafico">
+                <img src="graficos/licenciaturas_trancadas_por_rede_modalidade.png" alt="Gráfico Matrículas Trancadas em Licenciaturas por Tipo de Rede e Modalidade">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/licenciaturas_trancadas_por_rede_modalidade.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <div class="section" id="sec-evadidos-rede-modalidade">
+            <h2>Evadidos em Licenciaturas por Tipo de Rede e Modalidade</h2>
+            <div class="grafico">
+                <img src="graficos/licenciaturas_evadidos_por_rede_modalidade.png" alt="Gráfico Evadidos em Licenciaturas por Tipo de Rede e Modalidade">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/licenciaturas_evadidos_por_rede_modalidade.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <div class="section" id="sec-concluintes-rede-modalidade">
+            <h2>Concluintes em Licenciaturas por Tipo de Rede e Modalidade</h2>
+            <div class="grafico">
+                <img src="graficos/licenciaturas_concluintes_por_rede_modalidade.png" alt="Gráfico Concluintes em Licenciaturas por Tipo de Rede e Modalidade">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/licenciaturas_concluintes_por_rede_modalidade.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <div class="section" id="sec-relacao-conc-tranc-evad">
+            <h2>Relação (%) de Concluintes, Trancados e Evadidos sobre Ingressantes em Licenciaturas</h2>
+            <div class="grafico">
+                <img src="graficos/licenciativa_relacao_conc_tranc_evad_por_ingressante.png" alt="Gráfico Relação (%) de Concluintes, Trancados e Evadidos sobre Ingressantes">
+            </div>
+            <div class="tabela">
+                <iframe src="tabelas/licenciativa_relacao_conc_tranc_evad_por_ingressante.html"></iframe>
+            </div>
+            <div style="text-align:right;"><a href="#sumario">Voltar ao Sumário</a></div>
+        </div>
+        <!-- Adicione mais seções conforme novos relatórios forem criados -->
+        <div class="creditos">
+            Desenvolvido por sua equipe | Dados: INEP, CAPES, etc.<br>
+            <a href="https://github.com/" target="_blank" style="color:#2E7D32;">Ver código no GitHub</a>
+        </div>
+    </div>
+</body>
+</html> 

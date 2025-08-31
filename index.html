@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação a Distância nas Licenciaturas - Pesquisa Acadêmica</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#" id="logo-home" title="Voltar ao início">
+                        <img src="imagens/ANPAE.png" alt="ANPAE Logo" class="anpae-logo">
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <div class="nav-toggle" id="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li class="nav-item"><a href="#introducao" class="nav-link">Introdução</a></li>
+                        <li class="nav-item"><a href="#metodologia" class="nav-link">Metodologia</a></li>
+                        <li class="nav-item"><a href="#fundamentacao" class="nav-link">Fundamentação</a></li>
+                        <li class="nav-item"><a href="#desenvolvimento" class="nav-link">Desenvolvimento</a></li>
+                        <li class="nav-item"><a href="#consideracoes" class="nav-link">Considerações</a></li>
+                        <li class="nav-item"><a href="#referencias" class="nav-link">Referências</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-card">
+                    <h1 class="hero-title">Os cursos de licenciatura no Brasil: análise da modalidade EaD na formação de professores (2005-2024)</h1>
+                    <p class="hero-subtitle">Ocimar Luis Zolin e Valderi de Oliveira Bomfim Cassol</p>
+                    <p class="hero-program">Programa de Pós-Graduação em Educação - UFFS - Mestrado</p>
+                    <p class="hero-description">Demonstração interativa da pesquisa acadêmica desenvolvida por Ocimar Luis Zolin e Valderi de Oliveira Bomfim Cassol, apresentando metodologia, fundamentação teórica e resultados obtidos até o momento.</p>
+                    
+                    <!-- Imagem da UFFS -->
+                    <div class="uffs-image-container">
+                        <img src="imagens/Uffs.jpg" alt="Universidade Federal da Fronteira Sul" class="uffs-logo">
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="#introducao" class="btn btn-primary">Explorar Pesquisa</a>
+                        <a href="docs/E2-OcimarLuisZolin_v0.6.pdf" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Container para seções dinâmicas -->
+    <div id="dynamic-content">
+        <!-- Conteúdo será carregado dinamicamente via JavaScript -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-graduation-cap"></i> Pesquisadores</h4>
+                    <p><strong>Ocimar Luis Zolin</strong></p>
+                    <p><strong>Valderi de Oliveira Bomfim Cassol</strong></p>
+                    <p class="footer-description">Mestrandos em Educação</p>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-university"></i> Programa Acadêmico</h4>
+                    <p><strong>Programa de Pós-Graduação em Educação</strong></p>
+                    <p>Universidade Federal da Fronteira Sul (UFFS)</p>
+                    <p><strong>Orientador:</strong> Prof. Dr. Joviles Vitório Trevisol</p>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-envelope"></i> Contatos</h4>
+                    <div class="contact-emails">
+                        <p><a href="mailto:ocimar.zolin@gmail.com">ocimar.zolin@gmail.com</a></p>
+                        <p><a href="mailto:valderi.cassol@sed.sc.gov.br">valderi.cassol@sed.sc.gov.br</a></p>
+                        <p><a href="mailto:joviles.trevisol@uffs.edu.br">joviles.trevisol@uffs.edu.br</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Programa de Pós-Graduação em Educação - UFFS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão de voltar ao topo -->
+    <button id="back-to-top" class="back-to-top" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal para visualização de imagens -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <div id="modal-caption"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/section-loader.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
