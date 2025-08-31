@@ -138,6 +138,14 @@ class SectionLoader {
             case 'referencias':
                 // Adicionar inicializações específicas para referências se necessário
                 break;
+            case 'consideracoes':
+                // Reinicializa navegação de subseções para considerações
+                if (window.initSubsectionNavigation) {
+                    setTimeout(() => {
+                        window.initSubsectionNavigation();
+                    }, 100);
+                }
+                break;
         }
     }
 

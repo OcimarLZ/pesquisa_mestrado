@@ -255,12 +255,14 @@ body {
 
 .content-grid {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2rem;
+    align-items: flex-start;
 }
 
 .content-text {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
 }
 
 .content-text .lead {
@@ -308,8 +310,8 @@ body {
 }
 
 .content-visual {
-    width: 100%;
-    margin-top: 2rem;
+    flex: 0 0 350px;
+    margin-top: 0;
 }
 
 .info-card {
@@ -318,7 +320,8 @@ body {
     border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0 4px 15px rgba(40, 167, 69, 0.1);
-    max-width: 300px;
+    width: 100%;
+    height: fit-content;
 }
 
 .info-card h4 {
@@ -601,6 +604,16 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+    
+    .referencias-teoricas,
+    .fundamentacao-secoes {
+        padding: 1.5rem;
+    }
+    
+    .categoria-teorica,
+    .secao-fundamentacao {
+        padding: 1rem;
+    }
 }
 
 /* Responsividade */
@@ -708,6 +721,155 @@ body {
     box-shadow: 0 3px 10px rgba(40, 167, 69, 0.4);
     display: inline-block;
     margin-top: 0.2rem;
+}
+
+/* Estilos específicos para a seção de considerações */
+#consideracoes {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+#consideracoes .container {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+#consideracoes .content-grid {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+#consideracoes .content-text,
+#consideracoes .content-visual {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Estilos para Referências Teóricas */
+.referencias-teoricas {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 1px solid #dee2e6;
+    border-left: 5px solid #007bff;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.referencias-teoricas h4 {
+    color: #007bff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.categoria-teorica {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria-teorica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.categoria-teorica h5 {
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+.autor-contribuicao {
+    line-height: 1.6;
+    color: #666;
+}
+
+.autor-contribuicao strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Estilos para Estrutura da Fundamentação */
+.fundamentacao-secoes {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border: 1px solid #ffeaa7;
+    border-left: 5px solid #ffc107;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.fundamentacao-secoes h4 {
+    color: #856404;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.secao-fundamentacao {
+    background: white;
+    border: 1px solid #ffeaa7;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.secao-fundamentacao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.secao-fundamentacao h5 {
+    color: #856404;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 0.5rem;
+}
+
+.autores-secao {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 3px solid #ffc107;
+}
+
+.autores-secao strong {
+    color: #495057;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.objetivos-secao ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.objetivos-secao li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.objetivos-secao li:last-child {
+    margin-bottom: 0;
 }
 
 /* Responsividade */
@@ -1005,11 +1167,17 @@ body {
 /* Responsividade para content-grid */
 @media (max-width: 768px) {
     .content-grid {
+        flex-direction: column;
         gap: 1.5rem;
     }
     
     .content-text {
         padding-right: 0;
+    }
+    
+    .content-visual {
+        flex: none;
+        margin-top: 2rem;
     }
 }
 
@@ -1680,9 +1848,11 @@ body {
 /* Institutional Logics Styles */
 .institutional-logics {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .logic-item {
@@ -1785,9 +1955,11 @@ body {
 
 .implications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .policy-implications,
@@ -1857,9 +2029,11 @@ body {
 
 .limits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .methodological-limits,
@@ -1926,7 +2100,7 @@ body {
 }
 
 .research-section h4 {
-    color: #ffd700;
+    color: #2c5aa0;
     margin-bottom: 15px;
     font-size: 1.5em;
     border-bottom: 2px solid rgba(255, 215, 0, 0.3);
@@ -1945,9 +2119,11 @@ body {
 
 .agenda-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .research-path {
@@ -1985,15 +2161,16 @@ body {
 .research-relevance {
     margin: 15px 0;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    border-left: 4px solid #ffd700;
+    border-left: 4px solid #2c5aa0;
+    backdrop-filter: blur(5px);
 }
 
 .research-question h6,
 .research-methodology h6,
 .research-relevance h6 {
-    color: #ffd700;
+    color: #2c5aa0;
     margin-bottom: 8px;
     font-size: 1em;
     font-weight: 600;
@@ -2004,7 +2181,11 @@ body {
 .research-relevance p {
     margin: 0;
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.9);
+    color: #000000 !important;
+    font-weight: 600 !important;
+    background-color: #ffffff !important;
+    padding: 5px !important;
+    border-radius: 4px !important;
 }
 
 .research-path ul {
@@ -2025,7 +2206,7 @@ body {
 }
 
 .research-path strong {
-    color: #ffd700;
+    color: #2c5aa0;
     font-weight: 600;
 }
 
@@ -2285,6 +2466,9 @@ body {
     margin: 3rem 0;
     box-shadow: 0 20px 50px rgba(200, 220, 255, 0.3);
     border: 1px solid #d6e7ff;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .final-considerations h3 {
@@ -2332,25 +2516,50 @@ body {
 .call-to-action p {
     line-height: 1.7;
     font-size: 1.1rem;
+    color: #000000 !important;
+    font-weight: 500 !important;
+}
+
+.conclusion-card p {
+    color: #000000 !important;
+    font-weight: 500 !important;
+    line-height: 1.7;
 }
 
 /* Responsive Design for New Sections */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .implications-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
     .limits-grid,
     .agenda-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .institutional-logics,
+    .limits-grid,
+    .agenda-grid,
+    .implications-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     
     .limits-section,
     .future-agenda-section,
-    .final-considerations {
-        padding: 2rem;
-        margin: 2rem 0;
+    .final-considerations,
+    .research-question-section,
+    .implications-section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
     }
     
     .conclusion-card {
-        padding: 2rem;
+        padding: 1.5rem;
     }
     
     .key-findings,
@@ -2358,6 +2567,17 @@ body {
     .call-to-action {
         padding: 1.5rem;
         margin: 1.5rem 0;
+    }
+    
+    .policy-card,
+    .management-card,
+    .limit-card {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .research-path {
+        padding: 1.5rem;
     }
 }
 
@@ -3858,7 +4078,7 @@ body {
 }
 
 .legislation-highlight::before {
-    content: "📜";
+    content: "§";
     position: absolute;
     top: -10px;
     left: 20px;
@@ -4318,4 +4538,24 @@ body {
         padding: 15px 20px;
         font-size: 0.9em;
     }
+}
+
+/* Correção para research-question dentro de methodology-card */
+.methodology-card .research-question {
+    background: rgba(40, 167, 69, 0.05);
+    border-left: 4px solid #28a745;
+}
+
+.methodology-card .research-question p,
+.methodology-card .research-question blockquote {
+    color: #333 !important;
+    font-weight: 500;
+}
+
+.methodology-card .research-question blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 5px;
 }
